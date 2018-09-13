@@ -13,6 +13,8 @@ require 'auto_chrome'
 def parse_options(arg_list)
   options = { profiles: [] }
 
+  options[:proxybase] = 8888
+
   OptionParser.new do |opts|
     opts.banner = "Usage: #{File.basename($0)} [options] [\"profile 1\" [\"profile 2\" ...]]"
     opts.separator ""
